@@ -1,14 +1,18 @@
 # Acemcp Node.js 实现
 
-> MCP 服务器，用于代码库索引和语义搜索 - Node.js 实现
+> MCP 服务器,用于代码库索引和语义搜索 - Node.js 实现
 
 [![License](https://img.shields.io/badge/license-ISC-blue.svg)](LICENSE)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue.svg)](https://www.typescriptlang.org/)
 
+<a href="https://glama.ai/mcp/servers/@yeuxuan/Ace-Mcp-Node">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@yeuxuan/Ace-Mcp-Node/badge" alt="Acemcp MCP server" />
+</a>
+
 ## 📖 简介
 
-Acemcp 是一个 MCP (Model Context Protocol) 服务器，提供代码库索引和语义搜索功能。此 Node.js 实现与 Python 版本完全兼容，共享相同的配置文件和数据格式。
+Acemcp 是一个 MCP (Model Context Protocol) 服务器,提供代码库索引和语义搜索功能。此 Node.js 实现与 Python 版本完全兼容,共享相同的配置文件和数据格式。
 
 ### 主要特性
 
@@ -47,7 +51,7 @@ npm run build
 
 ### 配置
 
-首次运行时，程序会在 `~/.acemcp/` 目录下创建配置文件：
+首次运行时,程序会在 `~/.acemcp/` 目录下创建配置文件:
 
 ```toml
 # ~/.acemcp/settings.toml
@@ -79,10 +83,10 @@ EXCLUDE_PATTERNS = [
 ### 启动 MCP 服务器
 
 ```bash
-# 标准模式（stdio）
+# 标准模式(stdio)
 npm start
 
-# 或使用开发模式（带自动重载）
+# 或使用开发模式(带自动重载)
 npm run dev
 
 # 使用自定义配置
@@ -94,12 +98,12 @@ npm start -- --web-port 8080
 
 ### WSL 路径支持
 
-Ace-Mcp-Node 完全支持 Windows Subsystem for Linux (WSL) 路径格式：
+Ace-Mcp-Node 完全支持 Windows Subsystem for Linux (WSL) 路径格式:
 
 | 路径类型 | 示例 | 说明 |
 |---------|------|------|
 | **Windows 本地** | `C:\Users\username\project` | 自动转换为 `C:/Users/username/project` |
-| **WSL 内部** | `/home/user/project` | 保持不变（仅 WSL 环境） |
+| **WSL 内部** | `/home/user/project` | 保持不变(仅 WSL 环境) |
 | **WSL 访问 Windows** | `/mnt/c/Users/username/project` | Windows 环境自动转为 `C:/Users/username/project` ⭐ |
 | **Windows 访问 WSL** | `\\wsl$\Ubuntu\home\user\project` | 自动转换为 `/home/user/project` |
 
@@ -116,13 +120,13 @@ Ace-Mcp-Node 完全支持 Windows Subsystem for Linux (WSL) 路径格式：
 ```
 
 **注意**: 
-- 路径将自动规范化为统一格式（使用正斜杠）
+- 路径将自动规范化为统一格式(使用正斜杠)
 - 末尾斜杠会被自动移除
 - 遇到路径问题请参考 [路径故障排查指南](PATH_TROUBLESHOOTING.md)
 
 ### 在 MCP 客户端中配置
 
-在你的 MCP 客户端配置文件中添加：
+在你的 MCP 客户端配置文件中添加:
 
 ```json
 {
@@ -150,7 +154,7 @@ Ace-Mcp-Node 完全支持 Windows Subsystem for Linux (WSL) 路径格式：
 }
 ```
 
-或使用 Web 管理界面：
+或使用 Web 管理界面:
 
 ```json
 {
@@ -174,20 +178,20 @@ Ace-Mcp-Node 完全支持 Windows Subsystem for Linux (WSL) 路径格式：
 
 搜索项目代码库中与查询相关的代码片段。
 
-**参数：**
+**参数:**
 
-- `project_root_path` (string, 必需): 项目根目录的绝对路径，使用正斜杠 `/` 作为路径分隔符
+- `project_root_path` (string, 必需): 项目根目录的绝对路径,使用正斜杠 `/` 作为路径分隔符
   - 示例: `C:/Users/username/projects/myproject`
 - `query` (string, 必需): 自然语言搜索查询
   - 示例: `"logging configuration setup"`, `"user authentication login"`
 
-**功能：**
+**功能:**
 
 1. 自动对项目进行增量索引
 2. 执行语义搜索
-3. 返回格式化的代码片段，包含文件路径和行号
+3. 返回格式化的代码片段,包含文件路径和行号
 
-**使用示例：**
+**使用示例:**
 
 ```typescript
 {
@@ -201,7 +205,7 @@ Ace-Mcp-Node 完全支持 Windows Subsystem for Linux (WSL) 路径格式：
 
 ## 🌐 Web 管理界面
 
-启动 Web 界面：
+启动 Web 界面:
 
 ```bash
 npm start -- --web-port 8080
@@ -242,7 +246,7 @@ Ace-Mcp-Node/
 
 ## 🔄 与 Python 版本的兼容性
 
-Node.js 实现与 Python 版本完全兼容：
+Node.js 实现与 Python 版本完全兼容:
 
 - **共享配置文件** - 使用相同的 `~/.acemcp/settings.toml`
 - **共享数据格式** - 使用相同的 `~/.acemcp/data/projects.json`
@@ -256,28 +260,28 @@ Node.js 实现与 Python 版本完全兼容：
 ### 开发模式
 
 ```bash
-# 启动开发服务器（自动重载）
+# 启动开发服务器(自动重载)
 npm run dev
 
 # 构建项目
 npm run build
 
-# 启动 Web 界面（开发模式）
+# 启动 Web 界面(开发模式)
 npm run dev -- --web-port 8080
 ```
 
 ### 脚本说明
 
 - `npm run build` - 编译 TypeScript 到 dist/
-- `npm run dev` - 开发模式（使用 tsx watch）
+- `npm run dev` - 开发模式(使用 tsx watch)
 - `npm start` - 运行编译后的代码
 - `npm start:web` - 启动带 Web 界面的服务器
 
 ## 📝 日志
 
-日志文件位置：`~/.acemcp/log/acemcp.log`
+日志文件位置:`~/.acemcp/log/acemcp.log`
 
-- 自动日志轮转（单文件最大 5MB）
+- 自动日志轮转(单文件最大 5MB)
 - 保留最近 10 个日志文件
 - 控制台输出 INFO 级别及以上
 - 文件输出 DEBUG 级别及以上
@@ -286,9 +290,9 @@ npm run dev -- --web-port 8080
 
 ### 路径问题
 
-如果遇到 "Project root path does not exist" 错误：
+如果遇到 "Project root path does not exist" 错误:
 
-1. **检查路径末尾是否有斜杠** - 路径末尾不应包含 `/` 或 `\`（v0.1.5+ 自动移除）
+1. **检查路径末尾是否有斜杠** - 路径末尾不应包含 `/` 或 `\`(v0.1.5+ 自动移除)
 2. **验证路径存在** - 使用 `ls` (Unix) 或 `dir` (Windows) 检查
 3. **使用绝对路径** - 避免使用相对路径
 4. **参考文档** - 查看 [路径故障排查指南](PATH_TROUBLESHOOTING.md)
@@ -299,11 +303,11 @@ npm run dev -- --web-port 8080
 
 ### 编码问题
 
-如果遇到文件编码错误，程序会自动尝试多种编码（UTF-8, GBK, GB2312, Latin-1）。
+如果遇到文件编码错误,程序会自动尝试多种编码(UTF-8, GBK, GB2312, Latin-1)。
 
 ### 连接问题
 
-检查 `BASE_URL` 和 `TOKEN` 配置是否正确：
+检查 `BASE_URL` 和 `TOKEN` 配置是否正确:
 
 ```bash
 cat ~/.acemcp/settings.toml
@@ -311,7 +315,7 @@ cat ~/.acemcp/settings.toml
 
 ### Web 界面无法访问
 
-确保指定的端口未被占用：
+确保指定的端口未被占用:
 
 ```bash
 # Windows
@@ -327,4 +331,4 @@ ISC License
 
 ## 🤝 贡献
 
-欢迎贡献！请随时提交 Pull Request。
+欢迎贡献!请随时提交 Pull Request。

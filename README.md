@@ -5,11 +5,8 @@
 [![License](https://img.shields.io/badge/license-ISC-blue.svg)](LICENSE)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue.svg)](https://www.typescriptlang.org/)
-
-<p align="center">
   <img src="https://img.shields.io/badge/MCP-Model%20Context%20Protocol-orange" alt="MCP">
   <img src="https://img.shields.io/badge/AI-Ready-success" alt="AI Ready">
-</p>
 
 ## 📑 目录
 

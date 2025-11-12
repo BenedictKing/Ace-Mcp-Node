@@ -1,7 +1,5 @@
 # Acemcp Node.js 实现
 
-> 🚀 强大的 MCP 服务器，为 AI 助手提供代码库索引和语义搜索能力
-
 [![npm version](https://img.shields.io/npm/v/acemcp-node.svg)](https://www.npmjs.com/package/acemcp-node)
 [![npm downloads](https://img.shields.io/npm/dm/acemcp-node.svg)](https://www.npmjs.com/package/acemcp-node)
 [![License](https://img.shields.io/badge/license-ISC-blue.svg)](LICENSE)
@@ -966,7 +964,7 @@ import { getConfig } from './config';
 
 ### 日志系统
 
-日志文件位置：`~/.acemcp/log/acemcp.log`
+日志文件位置:`~/.acemcp/log/acemcp.log`
 
 #### 日志级别
 
@@ -1354,7 +1352,7 @@ chore: 构建/工具相关
 
 **⭐ 如果这个项目对你有帮助，请给它一个 Star！ ⭐**
 
-Made with ❤️ by [wmymz](https://github.com/yeuxuan)
+Made with ❤️ by [yihua](https://github.com/yeuxuan)
 
 </div>
 
